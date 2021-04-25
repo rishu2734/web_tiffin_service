@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rishabh Website For TechChefz</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+		  // Prevent default anchor click behavior
+		  event.preventDefault();
+
+		  // Store hash
+		  var hash = this.hash;
+
+		  // Using jQuery's animate() method to add smooth page scroll
+		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 800, function(){
+	   
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		  });
+		} // End if
+	  });
+	});
+	</script>
+	
+	
+<script language="javascript">
+
+	function validate1()
+	{
+	var chks = document.getElementsByName('form1[]');
+	var chks2 = document.getElementsByName('form2[]');
+	var chks3 = document.getElementsByName('form3[]');
+	
+	var hasChecked = 0;
+	var hasChecked2 = 0;
+	var hasChecked3 = 0;
+	
+	for (var i = 0; i < chks.length; i++)
+	{
+		if (chks[i].checked)
+		{
+		hasChecked++;
+		}
+	}
+	
+	for (var i = 0; i < chks2.length; i++)
+	{
+		if (chks2[i].checked)
+		{
+		hasChecked2++;
+		}
+	}
+	
+	for (var i = 0; i < chks3.length; i++)
+	{
+		if (chks3[i].checked)
+		{
+		hasChecked3++;
+		}
+	}
+
+	if (hasChecked < 2 || hasChecked >= 3)
+		{
+		alert("Please select two options from WARM UP!");
+		return false;
+		}
+	else if (hasChecked2 < 2 || hasChecked >= 3)
+		{
+			alert("Please select two options from BURGERS!");
+			return false;
+		}
+	else if (hasChecked3 < 1)
+		{
+			alert("Please select at least one options from SMOOTHIES!");
+			return false;
+		}
+	else{
+		window.location.hash = "section3";
+		alert("NOW SELECT MORE FROM MENU PART-2!");
+	}
+	
+	return true;
+	}
+	
+	
+	
+	
+function validate2()
+	{
+	var chks = document.getElementsByName('form1[]');
+	var chks2 = document.getElementsByName('form2[]');
+	var chks3 = document.getElementsByName('form3[]');
+	
+	var hasChecked = 0;
+	var hasChecked2 = 0;
+	var hasChecked3 = 0;
+	
+	for (var i = 0; i < chks.length; i++)
+	{
+		if (chks[i].checked)
+		{
+		hasChecked++;
+		}
+	}
+	
+	for (var i = 0; i < chks2.length; i++)
+	{
+		if (chks2[i].checked)
+		{
+		hasChecked2++;
+		}
+	}
+	
+	for (var i = 0; i < chks3.length; i++)
+	{
+		if (chks3[i].checked)
+		{
+		hasChecked3++;
+		}
+	}
+
+	if (hasChecked < 2 || hasChecked >= 3)
+		{
+		alert("Please select two options from SANDWICHES!");
+		return false;
+		}
+	else if (hasChecked2 < 2 || hasChecked >= 3)
+		{
+			alert("Please select two options from MAIN!");
+			return false;
+		}
+	else if (hasChecked3 < 1)
+		{
+			alert("Please select at least one options from SHAKES!");
+			return false;
+		}
+	else{
+		window.location.hash = "section4";
+		alert("NOW ENTER YOUR DETAILS IN THE NEXT SECTION!");
+	}
+	
+	return true;
+	}	
+	
+</script>
+
+<script>
+	function checkoutComplete() {
+	  alert("THANK YOU FOR SHOOPING ON WEB TIFFIN SERVICE");
+	}
+</script>
+	
+</head>
+<body style="overflow-y: hidden; overflow-x: hidden;">	
+	<div class="wrapper" id="section1">
+			<nav class="navbar">
+				<img class="logo" src="logo1.png">
+				<ul>
+					<li><a class="active" href="#">HOME</a></li>
+					<li><a href="#section2">MENU 1</a></li>
+					<li><a href="#section3">MENU 2</a></li>
+					<li><a href="#section4">DETAILS</a></li>
+					<li><a href="#">ABOUT US</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+			<!-- <h1>This Is For</h1>
+			<h2>First TechChefz Assignment</h2> -->
+			<div class="buttons1">
+			<a href="#section2"><button>Order Now</button></a>
+			<!-- <button class="btn2">Subscribe Us</button>-->
+		</div>
+		</div>
+	</div>	
+	
+														<!--       MENU PART 1      -->
+	
+	
+	<div class="wrapper" id="section2" style="background: url(bg3.jpeg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+		
+		<!-- <h1>WEB TIFFIN SERVICE</h1>
+		<h1>SELECT YOUR FOOD FROM THIS MENU</h1></br>-->
+		
+		<div class="multiple-para">
+		<div class="para-50">
+		
+		<form onsubmit="return validate1()" method="post">
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 20px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:20px;">Select any two from Warm Up</p>
+			<label class="containerforcheckbox">CWC FRIES <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]">                                                           <!-- checked="checked" -->
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CWC TWISTING <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CWC RINGS <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CHICKEN WINGS <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+		</div>
+		</div>
+		
+		<div class="para-50">
+		
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 20px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:20px;">Select any two from Burgers</p>
+			<label class="containerforcheckbox">CWC SUPREME <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CHEESE CLASSIC <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">VEGAN PATCH <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CHILLI CLASSIC <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+		</div>
+		</div>
+		</div>
+		
+		
+		<div class="multiple-para">
+		<div class="para-100">
+		
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 0px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:22px;">Select any one from Smoothies</p>
+			<label class="containerforradio">PEANUT SMOOTHIE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">JELLY SMOOTHIE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">MANGO SMOOTHIE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">BANANA SMOOTHIE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+		</div>
+		</div>
+		</div>
+		
+		
+		<div class="buttons2" style="text-align: center;">
+			
+			<a href="#section1"><button class="btn2">BACK</button></a>
+			<button type="submit" value="submit" name="submit">NEXT</button>
+			<!--<input type="submit" value="submit"  name="submit"/>
+			<input type="submit" name="submit" value="Submit">Next</button> -->
+		</form>	
+		</div>		
+	</div>
+	
+	
+													<!--        MENU PART 2      -->
+	
+	
+	<div class="wrapper" id="section3" style="background: url(bg3.jpeg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+		
+		<!-- <h1>WEB TIFFIN SERVICE</h1>
+		<h1>SELECT YOUR FOOD FROM THIS MENU</h1></br>-->
+		
+		<div class="multiple-para">
+		<div class="para-50">
+		
+		<form onsubmit="return validate2()" method="post">
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 20px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:20px;">Select any two from Sandwich</p>
+			<label class="containerforcheckbox">GRIL SANDWICH <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]">                                                           <!-- checked="checked" -->
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CHILLI SANDWICH <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">VEG SANDWICH <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">CHEESE SANDWICH <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form1[]" >
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+		</div>
+		</div>
+		
+		<div class="para-50">
+		
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 20px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:20px;">Select any two from Mains</p>
+			<label class="containerforcheckbox">BBQ FUN RIBS <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">PRIME STEAK <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">BBQ PRAWNS <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+			<label class="containerforcheckbox">ROASTED CORNS <font size="2px">....($15)</font>
+			  <input type="checkbox" name="form2[]">
+			  <span class="checkmarkforcheckbox"></span>
+			</label>
+		</div>
+		</div>
+		</div>
+		
+		
+		<div class="multiple-para">
+		<div class="para-100">
+		
+		<div style="color: black; font-size: 25px; font-weight: bold; margin-top: 0px; width: 350px; text-align: center; position: relative; top: 15%; left: 20%;">
+			<p style="margin-bottom:20px; margin-left:22px;">Select any one from SHAKES</p>
+			<label class="containerforradio">MINT SHAKE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">OREO SHAKE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">KITKAT SHAKE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+			<label class="containerforradio">APPLE PIE SHAKE <font size="2px">....($30)</font>
+			  <input type="radio" name="form3[]">
+			  <span class="checkmarkforradio"></span>
+			</label>
+		</div>
+		</div>
+		</div>
+		
+		
+		<div class="buttons2" style="text-align: center;">
+		
+			<a href="#section2"><button class="btn2">BACK</button></a>
+			<button type="submit" value="submit" name="submit">NEXT</button>
+			<!--<input type="submit" value="submit"  name="submit"/>
+			<input type="submit" name="submit" value="Submit">Next</button>-->
+		</form>	
+		</div>		
+	</div>	
+	
+	
+	
+	
+	
+	
+										            <!--        CUSTOMER DETAILS SECTION        -->						
+
+<div class="wrapper" id="section4" style="background: url(bg3.jpeg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+      
+        <div class="row">
+          <div class="col-50">
+            <h4> </h4>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+			
+			<label for="state"><i class="fa fa-globe"></i> State</label>
+            <input type="text" id="state" name="state" placeholder="NY">
+            
+
+            <!-- <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div> -->
+          
+		  </div>
+
+          <div class="col-50">
+			<label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+		  
+			<label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+			
+			<label for="zip"><i class="fa fa-map-pin"></i> Zip</label>
+            <input type="text" id="zip" name="zip" placeholder="10001">
+			
+		  </div>
+		  
+		  
+		  
+		  
+		  <!-- <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div> -->
+          
+        </div>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label> -->
+        <input type="submit" value="Continue to checkout" class="btn" name="checkoutbutton" onclick="checkoutComplete()">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container2">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>10</b></span></h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$15</span></p>
+	  <p><a href="#">Product 1</a> <span class="price">$30</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$30</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$120</b></span></p>
+    </div>
+  </div>
+</div>		
+		
+		
+		
+
+
+
+
+
+
+
+
+		
+		<!-- <div class="buttons3" style="text-align: center;">
+			<a href="#section1"><button>Cancel</button></a>
+			<button class="btn2">Book Now</button>
+		</div> -->		
+</div>	
+
+
+</body>
+</html>
